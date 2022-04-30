@@ -1,8 +1,8 @@
 package com.bridgelabz.linkedlist;
 
 /**
- * Ability to delete the first element in the LinkedList of sequence 56->30->70
- * Final Sequence: 30->70
+ * Ability to delete the last element in the LinkedList of sequence 56->30->70
+ * Final Sequence: 56->30
  * 
  * @author : Snehal Patil
  *
@@ -56,7 +56,22 @@ public class DataStructure {
 		list.add(30);
 		list.add(56);
 		list.printNode();
+
 		list.pop();
+		list.printNode();
+	}
+
+	// Delete last element
+	public static void popLast() {
+		MyLinkedList list = new MyLinkedList();
+		list.add(70);
+		list.add(30);
+		list.add(56);
+		System.out.println("\nBefore deleting last node : ");
+		list.printNode();
+
+		System.out.println("\nAfter deleting last node : ");
+		list.popLast();
 		list.printNode();
 	}
 
@@ -79,5 +94,9 @@ public class DataStructure {
 		// Calling popFirst method to delete first node
 		System.out.println("Delete first node : ");
 		popFirst();
+
+		// Calling popLast method to last first node
+		System.out.println("Delete last node : ");
+		popLast();
 	}
 }
