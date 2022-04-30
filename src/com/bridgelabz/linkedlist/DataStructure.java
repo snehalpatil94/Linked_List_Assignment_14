@@ -1,7 +1,7 @@
 package com.bridgelabz.linkedlist;
 
 /**
- * Ability to create Linked List by appending 30 and 70 to 56
+ * Ability to insert 30 between 56 and 70
  * 
  * @author : Snehal Patil
  *
@@ -33,6 +33,21 @@ public class DataStructure {
 		list.printNode();
 	}
 
+	// Insert node in LinkList
+	public static void insertNode() {
+		MyLinkedList list = new MyLinkedList();
+
+		// insert node
+		list.append(56);
+		list.append(70);
+		System.out.println("Before Inserting : ");
+		list.printNode();
+		list.insertNode(list.head, 30);
+		System.out.println("After Inserting : ");
+		// print node
+		list.printNode();
+	}
+
 	public static void main(String[] args) {
 		System.out.println("-----------Welcome to linked list program---------");
 		System.out.println();
@@ -44,5 +59,9 @@ public class DataStructure {
 		// Calling Append Method
 		System.out.println("Appended element of Linked List :");
 		append();
+
+		// Calling Insert Method
+		System.out.println("Insert 30 in between 56 and 70");
+		insertNode();
 	}
 }
